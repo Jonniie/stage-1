@@ -146,11 +146,6 @@ Empty response body
 **Error Response:**
 - `404 Not Found`: String does not exist in the system
 
-### 6. Health Check
-**GET** `/health`
-
-Returns the health status of the API.
-
 **Response:**
 ```json
 {
@@ -292,9 +287,7 @@ The API includes comprehensive error handling with appropriate HTTP status codes
 - `500 Internal Server Error`: Server errors
 
 ## Notes
-
 - The API uses in-memory storage (JavaScript Map) which means data is lost when the server restarts
-- For production use, consider implementing persistent storage with a database
 - All string comparisons are case-insensitive where applicable
 - The SHA-256 hash serves as the unique identifier for each string
 - URL encoding is handled automatically for string values in URLs
